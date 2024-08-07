@@ -1,7 +1,7 @@
 # FROM registry.redhat.io/rhel9/go-toolset
 FROM registry.access.redhat.com/ubi9/ubi as builder
 
-RUN dnf install -y install golang kernel-devel
+RUN dnf install -y golang kernel-devel
 
 RUN mkdir /build
 WORKDIR /build
