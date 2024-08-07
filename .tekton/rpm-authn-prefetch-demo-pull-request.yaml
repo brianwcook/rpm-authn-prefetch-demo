@@ -28,6 +28,9 @@ spec:
     value: 5d
   - name: dockerfile
     value: Dockerfile
+  - name: prefetch-input
+    value: |
+      {"type": "rpm"}
   pipelineRef:
     name: build-pipeline
   taskRunTemplate: {}

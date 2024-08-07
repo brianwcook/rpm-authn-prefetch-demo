@@ -25,6 +25,9 @@ spec:
     value: quay.io/redhat-user-workloads/brianwcook-tenant/trusted-artifacts/rpm-authn-prefetch-demo:{{revision}}
   - name: dockerfile
     value: Dockerfile
+  - name: prefetch-input
+    value: |
+      {"type": "rpm"}
   pipelineRef:
     name: build-pipeline
   taskRunTemplate: {}
