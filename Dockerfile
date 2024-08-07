@@ -1,9 +1,7 @@
 # FROM registry.redhat.io/rhel9/go-toolset
 FROM registry.access.redhat.com/ubi9/ubi as builder
 
-RUN dnf -y --setopt=install_weak_deps=0 install \
-  cargo pkg-config perl-FindBin openssl-devel perl-lib perl-IPC-Cmd perl-File-Compare perl-File-Copy clang-devel \
-  tpm2-tss-devel protobuf-compiler meson golang
+RUN dnf install -y install golang kernel-devel
 
 RUN mkdir /build
 WORKDIR /build
